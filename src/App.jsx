@@ -1,4 +1,7 @@
 import './App.css'
+import Performance from './components/Performance';
+import {Container} from '@mui/material';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -6,11 +9,11 @@ function App() {
     <Container maxWidth="md">
       <BrowserRouter>
         <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/dashboard/:id" element={<Dashboard />} />
-        <Route path="/dashboard/:id/mangement" element={<Management />} />
-        <Route path="/dashboard/:id/attendance" element={<Attendance />} />
-        <Route path="/dashboard/:id/performance" element={<Performance />} />
+        <Route path="/" element />
+        <Route path="/dashboard/:id" element />
+        <Route path="/dashboard/:id/mangement" element />
+        <Route path="/dashboard/:id/attendance" element />
+        <Route path="/dashboard/:id/performance" element />
         </Routes>
       </BrowserRouter>
      
