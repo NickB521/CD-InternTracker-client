@@ -1,90 +1,127 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.weekly-schedule {
+  background-color: #fffff5;
+  border: 2px solid #d6e4ff;
+  border-radius: 12px;
+  padding: 20px;
+  font-family: 'Arial', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+  box-shadow: 0px 4px 6px rgb(0, 0, 0, 0.1);
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-}
-
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
-.weekly-schedlue {
-  padding: 16px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-}
-
-.header {
+.weekly-schedule .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 16px;
 }
 
-.arrow-btn {
-  background: #243e90;
-  color: whitesmoke;
-  padding: 8px;
-  margin: 4px;
+.weekly-schedule .header .month-title {
+  font-size: 20px;
+  color: #f47d26;
+  font-weight: bold;
+}
+
+.weekly-schedule .header .arrows .arrow-btn {
+  background-color: #243e90;
+  color: #ffffff;
   border: none;
-  border-radius: 4px;
+  padding: 8px 12px;
+  border-radius: 50%;
   cursor: pointer;
+  margin-left: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.weekly-schedule .header .arrows .arrow-btn:hover {
+ background-color: #1c2e6d;
+}
+
+.weekly-schedule .calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 8px;
+  text-align: center;
+}
+
+.weekly-schedule .calendar-day-header {
+  font-size: 14px;
+  color: #243e90;
+  font-weight: bold;
+  padding: 8px 0;
+}
+
+.weekly-schedule .calendar-day {
+  padding: 8px;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.weekly-schedule .calendar-day.empty {
+  background-color: transparent;
+  cursor: default;
+}
+
+.weekly-schedule .calendar-day .day-btn {
+  background: none;
+  border: none;
+  font-size: 16px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s, transform 0.3s ease;
+}
+
+.weekly-schedule .calendar-day:hover .day-btn {
+  color: #f47d26;
+  transform: scale(1.1);
+}
+
+.weekly-schedule .calendar-day.selected {
+  background-color: #f47d26;
+  color: #ffffff;
+  font-weight: bold;
+  border: 2px solid #243e90;
+}
+
+.weekly-schedule .calendar-day.selected .day-btn {
+  color: #ffffff;
+  cursor: default;
+}
+
+.calendar-day {
+  position: relative;
+}
+
+.task-tooltip {
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #243e90;
+  color: #ffffff;
+  padding:  10px;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+
+.calendar-day:hover .task-tooltip {
+  display: block;
+}
+
+.task-tooltip ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.task-tooltip li {
+  margin: 0;
+  padding: 2px 0;
+  font-size: 0.85rem;
 }
