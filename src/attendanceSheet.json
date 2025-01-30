@@ -1,6 +1,7 @@
 [
  {
    "name": "Zach Bagels",
+   "icon": "https://www.google.com/",
    "totalPresent": 10,
    "late": 25,
    "excusedAbsences": 42,
@@ -8,6 +9,7 @@
  },
  {
    "name": "Maestro Tippy",
+   "icon": "https://www.google.com/",
    "totalPresent": 0,
    "late": 0,
    "excusedAbsences": 0,
@@ -15,6 +17,7 @@
  },
  {
    "name": "Forgeta Boutit",
+   "icon": "https://www.google.com/",
    "totalPresent": 33,
    "late": 2,
    "excusedAbsences": 5,
@@ -22,6 +25,7 @@
  },
  {
    "name": "Zani TwoToes",
+   "icon": "https://www.google.com/",
    "totalPresent": 49,
    "late": 52,
    "excusedAbsences": 0,
@@ -29,6 +33,7 @@
  },
  {
    "name": "Pickle Master",
+   "icon": "https://www.google.com/",
    "totalPresent": 2,
    "late": 0,
    "excusedAbsences": 0,
@@ -36,6 +41,7 @@
  },
  {
    "name": "Candile Chroco",
+   "icon": "https://www.google.com/",
    "totalPresent": 70,
    "late": 5,
    "excusedAbsences": 5,
@@ -43,6 +49,7 @@
  },
  {
    "name": "Joey Drew",
+   "icon": "https://www.google.com/",
    "totalPresent": 62,
    "late": 10,
    "excusedAbsences": 35,
@@ -50,6 +57,7 @@
  },
  {
    "name": "Orlando Resrot",
+   "icon": "https://www.google.com/",
    "totalPresent": 40,
    "late": 1,
    "excusedAbsences": 1,
@@ -57,6 +65,7 @@
  },
  {
    "name": "Lukas Doinger",
+   "icon": "https://www.google.com/",
    "totalPresent": 13,
    "late": 0,
    "excusedAbsences": 3,
@@ -64,6 +73,7 @@
  },
  {
    "name": "Handy Mandy",
+   "icon": "https://www.google.com/",
    "totalPresent": 473,
    "late": 0,
    "excusedAbsences": 0,

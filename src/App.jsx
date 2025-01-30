@@ -19,6 +19,15 @@ function App() {
       accessor: "name",
     },
     {
+      width: 300,
+      Header: "ICON",
+      Cell: ({ cell }) => (
+        <a href= {"https://www.google.com/search?q=" + cell.row.values.name}>
+          Button
+        </a>
+      )
+    },
+    {
       Header: "PRESENT",
       accessor: "totalPresent",
     },
@@ -34,6 +43,8 @@ function App() {
       Header: "NO CALL NO SHOW",
       accessor: "noCallNoShow",
     },
+    
+    
   ], []);
 
   return (

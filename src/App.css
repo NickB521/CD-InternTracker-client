@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.container {
+  background-color:white;
+  padding:50px;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;
