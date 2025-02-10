@@ -2,12 +2,31 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 
 const WeeklySchedule = () => {
+    
     const [currentMonth, setCurrentMonth] = useState(new Date());
+    
     const [selectedDay, setSelectedDay] = useState(null);
+    
     const [tasks, setTasks] = useState({}); // Object to store tasks for each date
-    const [hoveredDay, setHoveredDay] = useState(null);
+    const [taskInput, setTaskInput] = useState('');
+    
+    const [isModalOpen, setIsModalOpen] = useState(false);
 
-    // Highlight the current date on page load
+    
+    useEffect(() => {
+        const savedTasks = localStorage.getItem('tasks');
+        if (savedTasks) {
+            setTasks(JSON.parse(savedTasks));
+        }
+    }, []);
+
+    // Save tasks manually to localStorage
+    const saveTasksToLocalStorage = () => {
+        localStorage.setItem('tasks', JSON.stringify(tasks));
+        alert('Tasks saved successfully!');
+    };
+
+    // Highlight today's date on page load
     useEffect(() => {
         const today = new Date();
         if (
@@ -27,15 +46,30 @@ const WeeklySchedule = () => {
     };
 
     const handleDayClick = (day) => {
-        const taskKey = `${currentMonth.getFullYear()}-${currentMonth.getMonth()}-${day}`;
-        const task = prompt(`Enter a task for ${currentMonth.toLocaleString('default', { month: 'long' })} ${day}:`);
-        if (task) {
+        setSelectedDay(day);
+        setIsModalOpen(true); // Open task modal when a day is clicked
+    };
+
+    const handleAddTask = () => {
+        if (taskInput.trim()) {
+            const taskKey = `${currentMonth.getFullYear()}-${currentMonth.getMonth()}-${selectedDay}`;
             setTasks((prevTasks) => ({
                 ...prevTasks,
-                [taskKey]: prevTasks[taskKey] ? [...prevTasks[taskKey], task] : [task], // Add task to existing array
+                [taskKey]: prevTasks[taskKey] ? [...prevTasks[taskKey], taskInput] : [taskInput],
             }));
+            setTaskInput('');
         }
-        setSelectedDay(day);
+    };
+
+    const handleRemoveTask = (taskKey, taskIndex) => {
+        setTasks((prevTasks) => {
+            const updatedTasks = { ...prevTasks };
+            updatedTasks[taskKey].splice(taskIndex, 1); // Remove the selected task
+            if (updatedTasks[taskKey].length === 0) {
+                delete updatedTasks[taskKey]; // Remove the key if no tasks are left
+            }
+            return updatedTasks;
+        });
     };
 
     const getCalendarDays = (month) => {
@@ -58,55 +92,77 @@ const WeeklySchedule = () => {
                     {currentMonth.toLocaleString('default', { month: 'long' })} {currentMonth.getFullYear()}
                 </h2>
                 <div className="arrows">
-                    <button onClick={handlePrevMonth} className="arrow-btn">
-                        &lt;
-                    </button>
-                    <button onClick={handleNextMonth} className="arrow-btn">
-                        &gt;
-                    </button>
+                    <button onClick={handlePrevMonth} className="arrow-btn">&lt;</button>
+                    <button onClick={handleNextMonth} className="arrow-btn">&gt;</button>
                 </div>
             </div>
             <div className="calendar">
                 {/* Calendar Header */}
                 {['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'].map((day, idx) => (
-                    <div key={idx} className="calendar-day-header">
-                        {day}
-                    </div>
+                    <div key={idx} className="calendar-day-header">{day}</div>
                 ))}
 
                 {/* Empty Days */}
-                {Array(firstDayOfWeek)
-                    .fill(null)
-                    .map((_, idx) => (
-                        <div key={`empty-${idx}`} className="calendar-day empty"></div>
-                    ))}
+                {Array(firstDayOfWeek).fill(null).map((_, idx) => (
+                    <div key={`empty-${idx}`} className="calendar-day empty"></div>
+                ))}
 
                 {/* Days of the Month */}
                 {days.map((day) => {
-                    const taskKey = `${currentMonth.getFullYear()}-${currentMonth.getMonth()}-${day}`;
-                    return (
-                        <div
-                            key={day}
-                            className={`calendar-day ${selectedDay === day ? 'selected' : ''}`}
-                            onMouseEnter={() => setHoveredDay(day)}
-                            onMouseLeave={() => setHoveredDay(null)}
-                        >
-                            <button className="day-btn" onClick={() => handleDayClick(day)}>
-                                {day}
-                            </button>
-                            {hoveredDay === day && tasks[taskKey] && (
-                                <div className="task-tooltip">
-                                    <ul>
-                                        {tasks[taskKey].map((task, idx) => (
-                                            <li key={idx}>{task}</li>
-                                        ))}
-                                    </ul>
-                                </div>
-                            )}
-                        </div>
-                    );
-                })}
+                 const taskKey = `${currentMonth.getFullYear()}-${currentMonth.getMonth()}-${day}`;
+                 return (
+                  <div
+                    key={day}
+                     className={`calendar-day ${selectedDay === day ? 'selected' : ''}`}
+                      style={{ position: 'relative' }} // Ensure relative positioning for the task indicator
+                     >
+                      <button className="day-btn" onClick={() => handleDayClick(day)}>
+                       {day}
+                 </button>
+                    {tasks[taskKey] && tasks[taskKey].length > 0 && (
+                    <div className="task-indicator"></div>
+                 )}
+              </div>
+            );
+         })}
             </div>
+
+            {isModalOpen && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <h3>Tasks for {`${currentMonth.getFullYear()}-${currentMonth.getMonth() + 1}-${selectedDay}`}</h3>
+                        <ul>
+                            {(tasks[`${currentMonth.getFullYear()}-${currentMonth.getMonth()}-${selectedDay}`] || []).map(
+                                (task, idx) => (
+                                    <li key={idx}>
+                                        {task}
+                                        <button
+                                            className="remove-task-btn"
+                                            onClick={() =>
+                                                handleRemoveTask(
+                                                    `${currentMonth.getFullYear()}-${currentMonth.getMonth()}-${selectedDay}`,
+                                                    idx
+                                                )
+                                            }
+                                        >
+                                            ✕
+                                        </button>
+                                    </li>
+                                )
+                            )}
+                        </ul>
+                        <input
+                            type="text"
+                            value={taskInput}
+                            onChange={(e) => setTaskInput(e.target.value)}
+                            placeholder="Enter a task"
+                        />
+                        <button onClick={handleAddTask}>Add Task</button>
+                        <button onClick={saveTasksToLocalStorage}>Save Tasks</button>
+                        <button onClick={() => setIsModalOpen(false)}>Close</button>
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
