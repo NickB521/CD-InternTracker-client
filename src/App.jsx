@@ -1,5 +1,7 @@
 import React from "react";
 import WeeklySchedule from "./components/WeeklySchedule";
+import AttendanceLog from "./components/AttendanceLog";
+import ZoomMeetingAttendance from "./components/ZoomMeetingAttendance";
 import "./App.css";
 
 function App() {
@@ -15,6 +17,16 @@ function App() {
         <div className="schedule-section">
           {/* Weekly Schedule Component */}
           <WeeklySchedule />
+        </div>
+
+        <div className="attendance-section">
+          {/* Attendance Log Component */}
+          <AttendanceLog />
+        </div>
+
+        <div className="meeting-attendance-section">
+          {/* Today's Dev Shop Zoom Meeting Attendance Component */}
+          <ZoomMeetingAttendance />
         </div>
 
       </main>
