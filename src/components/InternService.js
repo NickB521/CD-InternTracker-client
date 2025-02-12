@@ -11,11 +11,11 @@ export function createIntern(intern){
     return axios.post(INTERN_BASE_API_URL,intern); // create intern
 }
 
-export function getById(id){
+export function getInternById(id){
     return axios.get(`${INTERN_BASE_API_URL}/${id}`); // get by intern id 
 }
 
-export function getByEmail(email){
+export function getInternByEmail(email){
     return axios.get(`${INTERN_BASE_API_URL}/${email/{email}}`); // get intern email
 }
 
@@ -39,11 +39,11 @@ export function createTa(ta){
     return axios.post(USER_BASE_API_URL,ta); // create ta
 }
 
-export function getById(id){
+export function getTaById(id){
     return axios.get(`${USER_BASE_API_URL}/${id}`); // get by ta id 
 }
 
-export function getByEmail(email){
+export function getTaByEmail(email){
     return axios.get(`${USER_BASE_API_URL}/${email/{email}}`); // get ta email
 }
 
