@@ -1,4 +1,4 @@
-export const dataset = [
+export const dataset = [  // dummy data needs to be changed
   {
     java: 9,
     html: 7,
@@ -33,55 +33,6 @@ export const dataset = [
     js: 2,
     react: 9,
     student: 'Mark S',
-  },
-  {
-    java: 7,
-    html: 6,
-    js: 3,
-    react: 4,
-    student: 'Tyler K',
-  },
-  {
-    java: 5,
-    html: 6,
-    js: 5,
-    react: 9,
-    student: 'Kate M',
-  },
-  {
-    java: 5,
-    html: 1,
-    js: 6,
-    react: 2,
-    student: 'Parker R',
-  },
-  {
-    java: 2,
-    html: 5,
-    js: 9,
-    react: 1,
-    student: 'Jimmy B',
-  },
-  {
-    java: 6,
-    html: 5,
-    js: 9,
-    react: 5,
-    student: 'Paige M',
-  },
-  {
-    java: 7,
-    html: 4,
-    js: 6,
-    react: 8,
-    student: 'Emma N',
-  },
-  {
-    java: 1,
-    html: 7,
-    js: 3,
-    react: 5,
-    student: 'Peter K',
   },
 ];
 
