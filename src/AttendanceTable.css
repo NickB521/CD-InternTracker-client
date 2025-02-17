@@ -1,0 +1,172 @@
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f9fc;
+  color: #333;
+}
+
+.attendance-container {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin: 20px;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.student-count {
+  background: #ff8a00;
+  color: #fff;
+  padding: 3px 8px;
+  border-radius: 12px;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.filter-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #d1d5db;
+  padding: 6px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.filter-button:hover {
+  background: #f3f4f6;
+}
+
+.datepicker {
+  border: 1px solid #d1d5db;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  width: 140px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+thead {
+  background: #f4f5f7;
+  font-weight: bold;
+}
+
+thead th {
+  padding: 12px;
+  text-align: left;
+}
+
+tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+tbody tr:hover {
+  background: #f9fafb;
+}
+
+td {
+  padding: 12px;
+  vertical-align: middle;
+}
+
+.name-container {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.username {
+  color: #6b7280;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+.attendance-select {
+  min-width: 160px;
+}
+
+.attendance-select .css-1s2u09g-control {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent;
+}
+
+.phone {
+  display: inline-block;
+  padding: 4px 8px;
+  border: 1px solid rgba(59, 130, 246, 0.5);
+  border-radius: 6px;
+  background: rgba(59, 130, 246, 0.1);
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.notes-input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: border-color 0.2s;
+}
+
+.notes-input:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+.icon {
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.icon:hover {
+  color: #111827;
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.pagination button {
+  background: #f3f4f6;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.pagination button:hover {
+  background: #e5e7eb;
+}
