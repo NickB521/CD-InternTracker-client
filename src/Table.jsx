@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTable, useFilters, useGlobalFilter } from 'react-table';
 import fakeData from './attendanceSheet.json'
+import "./tableStyles.css";
 
 const Table = ({ columns, data }) => {
  const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow, state, setGlobalFilter } = useTable(
@@ -22,19 +23,19 @@ const Table = ({ columns, data }) => {
 
 return (
 <div>
-  <input
+{/* <input
   type="text"
   value={globalFilter}
   onChange={e => setGlobalFilter(e.target.value)}
   placeholder="Search..." // add a search input for global filtering
-  />
+  /> */} 
 
-<table {...getTableProps()}> {/* Returns an object of props that can be spread into a table element */}
-          <thead>
+<table className="table" {...getTableProps()}> {/* Returns an object of props that can be spread into a table element */}
+          <thead className="tHead">
             {headerGroups.map(headerGroup => ( //An array of objects that represents the header groups of each table.
-              <tr {...headerGroup.getHeaderGroupProps()}>
+              <tr className="trHead" {...headerGroup.getHeaderGroupProps()}>
                 {headerGroup.headers.map(column => (
-                  <th {...column.getHeaderProps()}> {/* Table Header */}
+                  <th className="th" {...column.getHeaderProps()}> {/* Table Header */}
                     {column.render("Header")} {/* Displays the value from the "Header" slot of each row! */}
                     <input 
                       type="text"
@@ -47,13 +48,13 @@ return (
               </tr>
             ))}
           </thead>
-          <tbody {...getTableBodyProps}>
+          <tbody className="tBody" {...getTableBodyProps}>
             {rows.map((row) => {
               prepareRow(row);
               return (
-                <tr {...row.getRowProps}>
+                <tr className="trBody" {...row.getRowProps}>
                   {row.cells.map((cell) => (
-                    <td {...cell.getCellProps()}>
+                    <td className="td" {...cell.getCellProps()}>
                       {cell.render("Cell")}
                     </td>
                   ))}

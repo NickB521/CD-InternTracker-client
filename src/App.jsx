@@ -1,9 +1,6 @@
 import { useState } from 'react';
-import reactLogo from './assets/react.svg';
-import viteLogo from '/vite.svg';
 import './App.css';
 import React from 'react';
-import { useTable } from 'react-table';
 import Table from "./Table.jsx";
 import fakeData from './attendanceSheet.json'
 
@@ -15,32 +12,32 @@ function App() {
   const data = React.useMemo(() => fakeData, []);
   const columns = React.useMemo(() => [
     {
-      Header: "NAME",
-      accessor: "name",
-    },
-    {
       width: 300,
       Header: "ICON",
       Cell: ({ cell }) => (
         <a href= {"https://www.google.com/search?q=" + cell.row.values.name}>
-          Button
+          (IMAGE)
         </a>
       )
     },
     {
-      Header: "PRESENT",
+      Header: "Name",
+      accessor: "name",
+    },
+    {
+      Header: "Total Present",
       accessor: "totalPresent",
     },
     {
-      Header: "LATE",
+      Header: "Late",
       accessor: "late",
     },
     {
-      Header: "EXCUSED ABSENCES",
+      Header: "Excused Absences",
       accessor: "excusedAbsences",
     },
     {
-      Header: "NO CALL NO SHOW",
+      Header: "NO Call/No Show",
       accessor: "noCallNoShow",
     },
     
@@ -55,10 +52,25 @@ function App() {
       </h1>
 
       <div className="container">
+
+        <div className="header"> 
+          
+          <div className="headerText"> 
+            <p>Team Members <b>100 users</b></p> 
+            
+          </div>
+
+          <div className="headerButton"> 
+            <button id="dlowReport">Download Report</button>
+          </div>
+
+        </div>
+
         <Table
         data={data}
         columns={columns}
         />
+
       </div>
     </div>
     </>

@@ -8,6 +8,7 @@
 .container {
   background-color:white;
   padding:50px;
+  margin:30px 10px;
 }
 
 .logo {
@@ -38,10 +39,43 @@
   }
 }
 
-.card {
-  padding: 2em;
+.header {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  
 }
 
-.read-the-docs {
-  color: #888;
+.headerText {
+  float: left;
+  flex-direction:row;
 }
+
+.headerText p {
+  text-align:left;
+  font-weight:bold;
+}
+
+.headerText b {
+  background-color:#FFF6ED;
+  color: #c4320a;
+  padding:8px;
+  border-radius:0.6em;
+  font-size:x-small
+  
+}
+
+.headerButton {
+  float: right;
+}
+
+.headerButton button {
+  background-color:white;
+  border-color: black;
+  color:#475467;
+  padding:20px 30px;
+  margin-bottom:30px;
+  margin-top:-30px;
+}
+
+
