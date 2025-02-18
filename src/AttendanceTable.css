@@ -82,7 +82,11 @@ tbody tr:hover {
 
 td {
   padding: 12px;
-  vertical-align: middle;
+  text-align: center;
+}
+
+.name-column {
+  text-align:left;
 }
 
 .name-container {
