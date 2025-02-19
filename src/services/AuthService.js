@@ -3,8 +3,12 @@ import axios from "axios"
 export function getLoginDetails(username, password) { // requests token for user and stores if successful
     
     axios.post('http://localhost:8080/api/auth/login?email=' + username + '&password=' + password).then((response) => {
-        console.log(response.data)
-        localStorage.setItem("token", response.data.accessToken);
+        if (response.data && response.data.accessToken) {
+            localStorage.setItem("token", response.data.accessToken);
+        }
+        else {
+            console.error("login failed");
+        }
     })
     
 }
