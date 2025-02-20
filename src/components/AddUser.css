@@ -1,0 +1,72 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+  
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .form-box {
+    background-color: white;
+    width: 45em;
+    padding: 2em;
+    border-radius: 1em;
+    border: 2px solid orange;
+  }
+  
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1em;
+    margin-bottom: 1em;
+  }
+  
+  button {
+    background-color: #1220d7;
+    color: white;
+    border: none;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+  }
+  
+  .delete-user {
+    background-color: #d71c1c;
+  }
+  
+  .input-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em 2em;
+  }
+  
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-field label {
+    font-weight: bold;
+    color: #1220d7;
+    margin-bottom: 0.3em;
+  }
+  
+  .form-field input,
+  .form-field select {
+    padding: 0.5em;
+    border: 2px solid #1220d7;
+    border-radius: 5px;
+    font-size: 1em;
+    background-color: white;
+    color: black;
+  }
+  
