@@ -22,36 +22,28 @@ const employees = [
 
 const AttendanceTable = () => {
 
-  const [notes, setNotes] = useState(() => {
-    return JSON.parse(localStorage.getItem("notes")) || {};
-  });
+
   const [selectedDate, setSelectedDate] = useState(new Date());
 
-  useEffect(() => {
-
-    localStorage.setItem("notes", JSON.stringify(notes));
-  }, [notes]);
 
   return (
+    <div className="outer">
+
+
+    <h1> Attendance </h1> 
     <div className="attendance-container">
+      
       <div className="header">
-        <h2 className="title">Attendance <span className="student-count">10 users</span></h2>
-        <div className="header-actions">
-          <DatePicker
-            selected={selectedDate}
-            onChange={(date) => setSelectedDate(date)}
-            className="datepicker"
-          />
-          <button className="filter-button">
-            <Filter size={18} /> Filter
-          </button>
+        <div className="headerTOP">
+          <h2 className="title">Team Members <span className="student-count">100 users</span></h2>
+          <button> Download Report </button>
         </div>
       </div>
       <table className="attendance-table">
         <thead>
           <tr>
             <th><input type="checkbox" /></th>
-            <th>Name</th>
+            <th id="headerName">Name</th>
             <th>Total Present</th>
             <th>Late</th>
             <th>Excused Absences</th>
@@ -79,10 +71,12 @@ const AttendanceTable = () => {
         </tbody>
       </table>
       <div className="pagination">
-        <button className="pagination-button">Previous</button>
+        <button className="pagination-button">← Previous</button>
         <span>1 2 3 ... 10</span>
-        <button className="pagination-button">Next</button>
+        <button className="pagination-button">Next →</button>
       </div>
+    </div>
+
     </div>
   );
 };
