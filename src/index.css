@@ -25,7 +25,7 @@
 }
 
 .weekly-schedule .header .arrows .arrow-btn {
-  background-color: #243e90;
+  background-color: #1220D7;
   color: #ffffff;
   border: none;
   padding: 8px 12px;
@@ -37,7 +37,7 @@
 }
 
 .weekly-schedule .header .arrows .arrow-btn:hover {
- background-color: #1c2e6d;
+ background-color: #1220D7;
 }
 
 .weekly-schedule .calendar {
@@ -49,7 +49,7 @@
 
 .weekly-schedule .calendar-day-header {
   font-size: 14px;
-  color: #243e90;
+  color: #1220D7;
   font-weight: bold;
   padding: 8px 0;
 }
@@ -83,7 +83,7 @@
   background-color: #f47d26;
   color: #ffffff;
   font-weight: bold;
-  border: 2px solid #243e90;
+  border: 2px solid #1220D7;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -112,7 +112,7 @@
   top: -60px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #243e90;
+  background-color: #1220D7;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 8px;
@@ -181,7 +181,7 @@
 
 .attendance-log h3{
   font-size: 18px;
-  color: #243e90;
+  color: #1220D7;
   margin-bottom: 16px;
 }
 
@@ -215,7 +215,7 @@
 .attendance-title {
   font-size: 18px;
   font-weight: bold;
-  color: #243e90;
+  color: #1220D7;
 }
 
 .week-box {
@@ -225,7 +225,7 @@
   border-radius: 8px;
   padding: 6px 12px;
   font-size: 14px;
-  color: #243e90;
+  color: #1220D7;
   font-weight: bold;
   text-align: center;
   cursor: pointer;
@@ -237,7 +237,7 @@
   background: transparent;
   font-size: 14px;
   font-weight: bold;
-  color: #243e90;
+  color: #1220D7;
   cursor: pointer;
   outline: none;
 }
@@ -352,3 +352,283 @@
   border-radius: 50%;
   pointer-events: none; 
 }
+
+.zoom-meeting-container {
+  background-color: #ffffff;
+  border: 2px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 700px; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-meeting-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  color: #1220D7;
+}
+
+.download-btn {
+  background-color: #1220D7;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 19px;
+  transition: all 0.3s ease;
+}
+
+.download-btn:hover {
+  background-color: #1c2e6d;
+}
+
+.filter-container {
+  margin-bottom: 20px;
+}
+
+.filter-dropdown {
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.filter-btn {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 6px;
+  background-color: white;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.filter-dropdown:hover {
+  border-color: #243e90;
+}
+
+.attendance-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.attendance-table th,
+.attendance-table td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+}
+
+.attendance-table th {
+  background-color: #1220D7;
+  color: white;
+  padding: 10px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.attendance-table select {
+  padding: 6px 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.export-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.export-button:hover {
+  background-color: #45a049;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #243e90;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.search-bar {
+  width: 99%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.search-bar:focus {
+  border-color: #1220D7;
+  outline: none;
+}
+
+.participant-info {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.participant-name {
+  font-weight: bold;
+}
+
+.participant-username {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.attendance-dropdown {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.attendance-dropdown:focus {
+  border-color: #243e90;
+  outline: none;
+}
+
+
+.participant-info {
+  display: flex;
+  align-items: center;
+}
+
+.name-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.participant-name {
+  font-weight: bold;
+}
+
+.participant-username {
+  color: gray;
+  font-size: 0.9rem;
+}
+
+.dashboard-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 12000px;
+}
+
+
+/* Attendance Log & Zoom Meeting Attendance Side by Side */
+.attendance-section {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr; 
+  gap: 20px;
+}
+
+@media (max-width: 768px) {
+  .attendance-section {
+    grid-template-columns: 1fr; 
+  }
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 6px;
+  background-color: #1220D7;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.pagination button:hover {
+  background-color: #1c2e6d;
+}
+
+.pagination button:disabled {
+  background-color: #b0bec5;
+  cursor: not-allowed;
+}
+
+.pagination button.active {
+  background-color: orange;
+  font-weight: bold;
+}
+
+.top-section {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.intern-count {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.user-count {
+  background-color: #fce8e6;
+  color: #f47d26;
+  padding: 2px 6px;
+  border-radius: 8px;
+  margin-left: 5px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.user-count:hover {
+  background-color: #e6f7ff;
+}
+
+.add-btn {
+  background-color: #4caf50;
+  color: white;
+  font-size: 14px;
+  padding: 10px 19px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+
+.add-btn:hover {
+  background-color: #388e3c;
+}
+
+.edit-btn, .delete-btn {
+  background: #e6f7ff;
+  border: none;
+  cursor: pointer;
+  padding: 6px;
+  margin: 0 3px;
+  transition: all 0.3s ease;
+}
+
+
