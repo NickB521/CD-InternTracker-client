@@ -14,18 +14,15 @@ function App() {
 
       {/* Main Content */}
       <main className="dashboard-content">
+        {/* Weekly Schedule (Full Width) */}
         <div className="schedule-section">
-          {/* Weekly Schedule Component */}
           <WeeklySchedule />
         </div>
 
+       {/* Attendance Log & Zoom Meeting Attendance Side by Side */}
         <div className="attendance-section">
-          {/* Attendance Log Component */}
+          
           <AttendanceLog />
-        </div>
-
-        <div className="meeting-attendance-section">
-          {/* Today's Dev Shop Zoom Meeting Attendance Component */}
           <ZoomMeetingAttendance />
         </div>
 
