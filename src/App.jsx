@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Performance from './components/Performance';
 import BarsDataset from './components/BarsData';
 import Navbar from './components/Navbar';
+import Add from './components/Add';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Routes>
           <Route path="/" element={<div>Login Content</div>} />
           <Route path="/dashboard/:id" element={<div>Dashboard Content</div>} />
+          <Route path="/dashboard/:id/adduser" element={<Add />} />
           <Route path="/dashboard/:id/management" element={<div>Management Content</div>} />
           <Route path="/dashboard/:id/attendance" element={<div>Attendance Content</div>} />
           <Route path="/dashboard/:id/performance" element={<Performance />} />

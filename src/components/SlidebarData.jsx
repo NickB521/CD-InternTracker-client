@@ -12,6 +12,12 @@ export const SidebarData = [
     cName: "nav-text"
   },
   {
+    title: "Users",
+    path: "/dashboard/:id/adduser",
+    icon: <IoIcons.IoMdPeople />,
+    cName: "nav-text"
+  },
+  {
     title: "Intern Management",
     path: "/dashboard/:id/management",
     icon: <IoIcons.IoMdPeople />,

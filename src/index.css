@@ -16,11 +16,23 @@ html, body {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.main2 {
+  background-color: white;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
 .main h2 {
   text-align: left;
   font-size: 1.5rem;
   margin-bottom: 20px;
   color: #333;
+}
+
+.box h1 {
+  font-size: 24px;
+  font-weight: bold;
 }
 
 .date-picker-container {
@@ -95,8 +107,6 @@ h2{
   background-color: #1220D7;
 }
 
-
-
 .datepicker-container {
   position: absolute;
   background: white;
@@ -108,15 +118,12 @@ h2{
   z-index: 1000;
 }
 
-
-
 .table-container {
   overflow-x: hidden;
   border-radius: 8px;
   background: #fff;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 
 thead {
   background: #f8f9fa;
@@ -133,12 +140,10 @@ th {
   font-weight: bold;
 }
 
-/* Team member column */
 .team-member {
   font-weight: bold;
   background: #f1f3f5;
 }
-
 
 input {
   width: 100%;
@@ -151,4 +156,51 @@ input:focus {
   outline: none;
   border-color: #007bff;
   box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.schedule{
+  background-color: #3f51b5 !important;
+  color: white !important;
+  border-radius: 6px !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+}
+
+.add{
+  background-color: #3f51b5 !important;
+  color: white !important;
+  border-radius: 6px !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+  width: 800px;
+  height: 50px;
+}
+.logo {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin-bottom: 10px;
+}
+.save {
+  background-color: #3f51b5 !important;
+  color: white !important;
+  border-radius: 6px !important;
+  padding: 10px 20px !important;
+  font-size: 16px !important;
+}
+
+.First {
+  width: 390px;
+}
+.Last{
+  width: 390px;
+}
+.Email{
+  width: 250px;
+}
+.Number{
+  width: 250px;
+}
+.schedule{
+  width: 250px;
 }
