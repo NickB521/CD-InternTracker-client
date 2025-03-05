@@ -17,7 +17,9 @@ function App() {
       <BrowserRouter>
       <Navbar />
         <Routes>
-          <Route path="/" element={<Signup/>} />
+          <Route path="/" element={<div>Login Content</div>} />
+          <Route path="/signup" element={<Signup/>} />
+          <Route path="/login" element={<Login/>} />
           <Route path="/dashboard/:id" element={<div>Dashboard Content</div>} />
           <Route path="/dashboard/:id/management" element={<div>Management Content</div>} />
           <Route path="/dashboard/:id/attendance" element={<div>Attendance Content</div>} />
