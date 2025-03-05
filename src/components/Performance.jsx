@@ -5,11 +5,11 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { useNavigate, useParams } from "react-router-dom";
 import { FaFilter } from "react-icons/fa"; 
 
-
 const Performance = () => {
   const [assignments, setAssignments] = useState({});
   const [selectedWeek, setSelectedWeek] = useState(new Date());
   const [showDatePicker, setShowDatePicker] = useState(false);
+  const [query, setQuery] = useState(""); // Search query
 
   useEffect(() => {
     const savedAssignments = localStorage.getItem("assignments");
@@ -33,7 +33,7 @@ const Performance = () => {
           [date]: value,
         },
       };
-      localStorage.setItem("assignments", JSON.stringify(updatedAssignments)); // Save immediately
+      localStorage.setItem("assignments", JSON.stringify(updatedAssignments));
       return updatedAssignments;
     });
   };
@@ -59,6 +59,11 @@ const Performance = () => {
     "Mark S",
   ];
 
+  // Search function to filter team members
+  const filteredMembers = teamMembers.filter((member) =>
+    member.toLowerCase().includes(query.toLowerCase())
+  );
+
   const dates = generateDates();
 
   const navigate = useNavigate();
@@ -68,18 +73,22 @@ const Performance = () => {
     navigate(`/dashboard/${id}/studentcharts`);
   };
 
-
   return (
     <div className="schedule-container">
       <div className="header">
         <h1>Performance</h1>
         <div className="filter-container">
-        <button className="filter-button" onClick={handleNavigation}>
-        Team Progress
+          <button className="filter-button" onClick={handleNavigation}>
+            Team Progress
           </button>
           <button className="filter-button" onClick={() => setShowDatePicker((prev) => !prev)}>
-          <FaFilter />  Filter by
+            <FaFilter /> Filter by
           </button>
+          <input
+        className="search"
+        placeholder="Search team members..."
+        onChange={(e) => setQuery(e.target.value)}
+      />
           {showDatePicker && (
             <div className="datepicker-container">
               <DatePicker
@@ -113,7 +122,7 @@ const Performance = () => {
             </tr>
           </thead>
           <tbody>
-            {teamMembers.map((member) => (
+            {filteredMembers.map((member) => (
               <tr key={member}>
                 <td className="team-member">{member}</td>
                 {dates.map((date) => (

@@ -101,6 +101,7 @@ h2{
   cursor: pointer;
   font-size: 14px;
   gap: 5px; 
+  width: 120px;
 }
 
 .filter-button:hover {
