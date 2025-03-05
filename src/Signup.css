@@ -1,0 +1,166 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  .container {
+    background-color: white;
+    padding: 300px;
+    width: 800px; 
+    height: 280px; 
+    text-align: center;
+    position: relative;
+  }
+  
+  .blue-line {
+    background-color: #1220D7;
+    height: .95in; 
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  
+  .header {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .logo {
+    position: absolute;
+    top: -211px;
+    right: 820px;
+    width: 280px; 
+    height: auto;
+  }
+  
+  .title {
+    font-size: 75px; 
+    font-weight: mid-bold;
+    color: black;
+    position: top;
+    padding-bottom: 10px;
+    margin-top: -89px;
+    margin-left: -25px; 
+  
+  }
+  .title::after {
+    content: '';
+    width: 300px;
+    height: 2px;
+    background-color: black;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-left: -15px; 
+  
+  }
+  
+  .input-field {
+    margin-bottom: 20px; 
+    
+  }
+  
+  .input-field input {
+    width: 450px; 
+    padding: 30px;
+    border: 3px solid #FB896B;
+    border-radius: 560px;
+    box-sizing: border-box;
+    font-size: 26px; 
+    margin-top: 50px; 
+    margin-left: -65px; 
+    background-color: #F1F3FF; 
+    height: 90px; 
+  
+  }
+  
+  .input-field2 input {
+    width: 450px; 
+    padding: 30px; 
+    border: 3px solid #FB896B; 
+    border-radius: 560px; 
+    box-sizing: border-box;
+    font-size: 26px; 
+    margin-top: 30px; 
+    margin-left: -65px; 
+    background-color: #F1F3FF; 
+    height: 90px; 
+  
+  }
+  
+  .input-field input::placeholder,
+  .input-field2 input::placeholder {
+    color: grey; 
+    opacity: 1; 
+  
+  }
+  
+  .small-text {
+    font-size: 20px;
+  }
+  
+  .medium-text {
+    font-size: 28px;
+  }
+  
+  .large-text {
+    font-size: 36px;
+  }
+  button {
+    width: 450px;
+    height: 90px; 
+    padding: 30px; 
+    background-color: #1220D7;
+    color: white;
+    border: none;
+    border-radius: 560px; 
+    cursor: pointer;
+    font-size: 58px; 
+    margin-top: 30px;
+    margin-left: -65px; 
+    line-height: 20px; 
+  
+  }
+  
+  button:hover {
+    background-color: #1220D7;
+  }
+  
+  .links {
+    margin-top: 15px; 
+  }
+  
+  .links a {
+    color: grey;
+    text-decoration: underline;
+    font-size: 28px; 
+    margin-left: -65px; 
+  
+  }
+  
+  .links a:hover {
+    color: darkgrey;
+  }
+  
+  .forgotlink {
+    margin-top: 15px; 
+  }
+  
+  .forgotlink a {
+    color: grey;
+    text-decoration: underline;
+    font-size: 21px; 
+    margin-left: -65px; 
+  }
+  
+  .forgotlink a:hover {
+    color: darkgrey;
+  }  
+  
