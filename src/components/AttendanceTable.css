@@ -1,0 +1,167 @@
+.attendance-page body {
+  font-family: 'Inter', sans-serif;
+  background-color:#F0F7FF;
+  color: #333;
+  width:100%;
+  
+}
+
+.attendance-page div {
+  width: 90%;
+  margin:auto;
+}
+
+.attendance-page .tableheader {
+  width:100%;
+}
+
+.attendance-page .outer h1 {
+  margin-left:-60px;
+  display:flex;
+  
+}
+
+.attendance-page attendance-container {
+  flex-direction:column;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  
+  min-width:100%;
+  flex: 1 1 100%;
+}
+
+.attendance-page h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.attendance-page table {
+  width: 100%;
+  border-collapse:collapse;
+  background: #fff;
+}
+
+.attendance-page thead {
+  background: #f4f5f7;
+  font-weight: bold;
+}
+
+.attendance-page thead th {
+  padding: 12px;
+  text-align: center;
+}
+
+.attendance-page #headerName {
+  text-align:left;
+}
+
+.attendance-page tbody tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.attendance-page tbody tr:hover {
+  background: #f9fafb;
+}
+
+.attendance-page td {
+  padding: 12px;
+  text-align: center;
+  
+}
+
+.attendance-page name-column {
+  text-align:left;
+}
+
+.attendance-page name-container {
+  display: flex;
+  align-items: center;
+}
+
+.attendance-page .avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  margin-right: 8px;
+}
+
+.attendance-page .username {
+  color: #6b7280;
+  font-size: 14px;
+  margin-left: 6px;
+}
+
+.attendance-page .attendance-select {
+  min-width: 160px;
+}
+
+.attendance-page .attendance-select .css-1s2u09g-control {
+  border: none !important;
+  box-shadow: none !important;
+  background: transparent;
+}
+
+.attendance-page .icon {
+  cursor: pointer;
+  color: #6b7280;
+  transition: color 0.2s;
+}
+
+.attendance-page .icon:hover {
+  color: #111827;
+}
+
+.attendance-page .pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 16px;
+}
+
+.attendance-page .pagination button {
+  background-color: white;
+  border-style:solid;
+  border-color:#d0d5dd;
+  color: #344054;
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight:bolder;
+}
+
+.attendance-page .pagination button:hover {
+  background: #e5e7eb;
+}
+
+.attendance-page .headerTOP {
+  width:100%;
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  margin-bottom:20px;
+}
+
+.attendance-page .headerTOP button {
+  background-color:white;
+  border-color: black;
+  color:#475467;
+ /* padding:20px 30px; */
+  font-weight:bolder;
+}
+
+.attendance-page .student-count {
+  background-color:#FFF6ED;
+  color:#C4320A;
+  border-radius:2.2em;
+  padding: 4px;
+}
+
+.attendance-page input{
+height: 60px;
+width: 250px;
+}
+.attendance-page span {
+  margin-left: 0;
+}

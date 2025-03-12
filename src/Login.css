@@ -1,4 +1,4 @@
-body {
+/*.login-page body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     display: flex;
@@ -6,9 +6,9 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-  }
+  } */
   
-  .container {
+  .login-page  .container {
     background-color: white;
     padding: 300px;
     width: 800px; 
@@ -16,22 +16,21 @@ body {
     text-align: center;
     position: relative;
   }
-  
-  .blue-line {
-    background-color: #1220D7;
-    height: .95in; 
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
+ /* 
+  .login-page  .main {
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
   
-  .header {
+  
+  .login-page .header {
     margin-bottom: 20px;
     position: relative;
   }
   
-  .logo {
+  .login-page  .logo {
     position: absolute;
     top: -100px;
     right: 820px;
@@ -39,7 +38,7 @@ body {
     height: auto;
   }
   
-  .title {
+  .login-page  .title {
     font-size: 75px; 
     font-weight: mid-bold;
     color: black;
@@ -48,7 +47,7 @@ body {
     margin-top: -200px;
     margin-left: -25px; 
   }
-  .title::after {
+  .login-page  .title::after {
     content: '';
     width: 300px;
     height: 2px;
@@ -60,24 +59,7 @@ body {
     margin-left: -15px; 
   }
   
-  .input-field input,
-  .input-field2 input,
-  .input-field3 input,
-  .input-field4 input {
-    width: 450px; 
-    padding: 30px;
-    border: 3px solid #FB896B;
-    border-radius: 560px;
-    box-sizing: border-box;
-    font-size: 26px; 
-    margin-top: 50px; 
-    margin-left: -65px; 
-    background-color: #F1F3FF; 
-    height: 90px; 
-    margin-top: 15px; 
-  }
-  
-  .input-field input::placeholder,
+  .login-page  .input-field input::placeholder,
   .input-field2 input::placeholder,
   .input-field3 input::placeholder,
   .input-field4 input::placeholder {
@@ -85,19 +67,19 @@ body {
     opacity: 1; 
   }
   
-  .small-text {
+  .login-page  .small-text {
     font-size: 20px;
   }
   
-  .medium-text {
+  .login-page  .medium-text {
     font-size: 28px;
   }
   
-  .large-text {
+  .login-page  .large-text {
     font-size: 36px;
   }
   
-  button {
+  .login-page  button {
     width: 450px;
     height: 90px; 
     padding: 30px; 
@@ -112,36 +94,94 @@ body {
     line-height: 20px; 
   }
   
-  button:hover {
+  .login-page  button:hover {
     background-color: #1220D7;
   }
   
-  .links {
+  .login-page  .links {
     margin-top: 15px; 
   }
   
-  .links a {
+  .login-page  .links a {
     color: grey;
     text-decoration: underline;
     font-size: 28px; 
     margin-left: -65px; 
   }
   
-  .links a:hover {
+  .login-page  .links a:hover {
     color: darkgrey;
   }
   
-  .forgotlink {
+  .login-page  .forgotlink {
     margin-top: 15px; 
   }
   
-  .forgotlink a {
+  .login-page  .forgotlink a {
     color: grey;
     text-decoration: underline;
     font-size: 21px; 
     margin-left: -65px; 
   }
-  
-  .forgotlink a:hover {
+  */
+  .login-page  .forgotlink a:hover {
     color: darkgrey;
   }  
+
+  .login-page .email{
+    width: 100%; 
+    height: 40px;
+    margin-bottom: 10px;
+  }
+
+  .login-page .password{
+    width: 100%;   
+    height: 40px;
+  }
+  .login-page input {
+    width: 100%;
+    padding: 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  .login-page .logo {
+    width: 100px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+  .login-page h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .login-page .small{
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .login-page .submit{
+    background-color: #3f51b5 !important;
+    color: white !important;
+    border-radius: 6px !important;
+    padding: 10px 20px !important;
+    font-size: 16px !important;
+    width: 200px;
+    margin: 20px auto 0;
+    display: block;
+    cursor: pointer;
+  }
+  .login-page .links{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    text-align: center;
+  }
+  .login-page .forgotlink{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .login-page  .links {
+    margin-top: 15px; 
+  }
