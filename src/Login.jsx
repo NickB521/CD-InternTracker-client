@@ -8,7 +8,7 @@ function Login() {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    navigate("/calendar");
+    navigate("/dashboard/:id");
   };
 
   return (
